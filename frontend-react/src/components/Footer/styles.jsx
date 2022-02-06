@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 export const FooterContainer = styled.div`
   background-color: ${({ theme }) => theme.colors.dark};
@@ -11,12 +11,12 @@ export const FooterContainer = styled.div`
     text-align: center;
     width: 40ch;
   }
-`;
+`
 export const CopyRightContainer = styled.div`
   padding: 1rem;
   display: flex;
   justify-content: end;
   width: 100%;
   background-color: ${({ theme }) => theme.colors.black};
-`;
-export const IconsLinks = styled.img``;
+`
+export const IconsLinks = styled.img``

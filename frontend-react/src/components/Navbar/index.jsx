@@ -1,57 +1,57 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { FaHamburger, FaTimes } from 'react-icons/fa';
+import { useState } from 'react'
+import { Link } from 'react-router-dom'
+import { FaHamburger, FaTimes } from 'react-icons/fa'
 import {
   BurgerIcon,
   FlexContainer,
   LinksLabel,
   Logo,
   NavbarContainer,
-  NavMenu,
-} from './NavbarElements';
-import logoBlanco from '../../images/logoBlanco.png';
+  NavMenu
+} from './styles'
+import logoBlanco from '../../images/logoBlanco.png'
 
-function Navbar() {
-  const [smallScreen, setScreen] = useState(false);
+function Navbar () {
+  const [showNavMenu, setShowNavMenu] = useState(false)
 
-  const handleClick = () => setScreen(!smallScreen);
-  const closeMobileMenu = () => setScreen(false);
+  const handleClick = () => setShowNavMenu(!showNavMenu)
+
   return (
     <NavbarContainer>
       <FlexContainer>
-        <Link to="/" onClick={closeMobileMenu}>
-          <Logo src={logoBlanco} alt="Logo" />
+        <Link to='/'>
+          <Logo src={logoBlanco} alt='Logo' />
         </Link>
       </FlexContainer>
 
       <FlexContainer>
         <BurgerIcon onClick={handleClick}>
-          {smallScreen ? <FaTimes /> : <FaHamburger />}
+          {showNavMenu ? <FaTimes /> : <FaHamburger />}
         </BurgerIcon>
         <NavMenu
-          smallScreen={smallScreen}
+          showNavMenu={showNavMenu}
           onClick={handleClick}
-          activeClass="activate"
+          activeClass='activate'
         >
           <li>
-            <LinksLabel to="/">Home</LinksLabel>
+            <LinksLabel to='/'>Home</LinksLabel>
           </li>
           <li>
-            <LinksLabel to="/restaurants">Restaurantes</LinksLabel>
+            <LinksLabel to='/restaurants'>Restaurantes</LinksLabel>
           </li>
           <li>
-            <LinksLabel to="/categories">Categorias</LinksLabel>
+            <LinksLabel to='/categories'>Categories</LinksLabel>
           </li>
           <li>
-            <LinksLabel to="/about-us">Quienes somos</LinksLabel>
+            <LinksLabel to='/about-us'>Quienes somos</LinksLabel>
           </li>
           <li>
-            <LinksLabel to="/sign-up">Registro</LinksLabel>
+            <LinksLabel to='/sign-up'>Registro</LinksLabel>
           </li>
         </NavMenu>
       </FlexContainer>
     </NavbarContainer>
-  );
+  )
 }
 
-export default Navbar;
+export default Navbar

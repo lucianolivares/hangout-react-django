@@ -1,12 +1,12 @@
-import React from 'react';
-import { PageContainer, Title } from '../../globalStyles';
+import React from 'react'
+import { PageContainer, Title } from '../../globalStyles'
 
-function SignUp() {
+function SignUp () {
   return (
     <PageContainer>
-      <Title>Registro</Title>
+      <Title className='primary'>Registro</Title>
     </PageContainer>
-  );
+  )
 }
 
-export default SignUp;
+export default SignUp

@@ -1,15 +1,15 @@
-import React from 'react';
-import AboutUs from '../../components/AboutUs';
-import Contact from '../../components/Contact';
-import { PageContainer } from '../../globalStyles';
+import React from 'react'
+import AboutUs from '../../components/AboutUs'
+import Contact from '../../components/Contact'
+import { PageContainer } from '../../globalStyles'
 
-function AboutUsPage() {
+function AboutUsPage () {
   return (
     <PageContainer>
       <AboutUs />
       <Contact />
     </PageContainer>
-  );
+  )
 }
 
-export default AboutUsPage;
+export default AboutUsPage

@@ -1,8 +1,7 @@
-import React from 'react';
 // import { FaLinkedinIn, FaInstagram, FaFacebookF } from 'react-icons/fa';
-import { CopyRightContainer, FooterContainer } from './FooterElements';
+import { CopyRightContainer, FooterContainer } from './styles'
 
-function Footer() {
+function Footer () {
   return (
     <FooterContainer>
       {/* <FlexLayout>
@@ -14,7 +13,7 @@ function Footer() {
         <small>© 2022 Hangout - Restorant Reservations - Privacy Policy</small>
       </CopyRightContainer>
     </FooterContainer>
-  );
+  )
 }
 
-export default Footer;
+export default Footer

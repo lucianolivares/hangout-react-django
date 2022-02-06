@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { NavLink as Link } from 'react-router-dom';
+import styled from 'styled-components'
+import { NavLink as Link } from 'react-router-dom'
 
 export const NavbarContainer = styled.nav`
   position: fixed;
@@ -11,7 +11,7 @@ export const NavbarContainer = styled.nav`
   z-index: 999;
   box-shadow: 0 13px 28px 0px rgba(0, 0, 0, 0.5);
   background-color: ${({ theme }) => theme.colors.dark};
-`;
+`
 
 export const FlexContainer = styled.div`
   display: flex;
@@ -35,7 +35,7 @@ export const FlexContainer = styled.div`
       }
     }
   }
-`;
+`
 
 export const NavMenu = styled.ul`
   font-size: 1rem;
@@ -50,17 +50,17 @@ export const NavMenu = styled.ul`
     width: 50%;
     top: 5rem;
     position: absolute;
-    right: ${({ smallScreen }) => (smallScreen ? '0%' : '-50%')};
+    right: ${({ showNavMenu }) => (showNavMenu ? '0%' : '-50%')};
     opacity: 1;
     transition: all 0.5s ease;
     background: ${({ theme }) => theme.colors.dark};
   }
-`;
+`
 
 export const Logo = styled.img`
   height: 3.5rem;
   object-fit: scale-down;
-`;
+`
 
 export const LinksLabel = styled(Link)`
   cursor: pointer;
@@ -73,7 +73,7 @@ export const LinksLabel = styled(Link)`
   :hover {
     color: ${({ theme }) => theme.colors.secondary};
   }
-`;
+`
 
 export const BurgerIcon = styled.div`
   color: #000;
@@ -86,4 +86,4 @@ export const BurgerIcon = styled.div`
     display: flex;
     cursor: pointer;
   }
-`;
+`

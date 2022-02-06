@@ -1,12 +1,11 @@
-import React from 'react';
-import { SubTitle } from '../../globalStyles';
-import { FooterContainer } from '../Footer/FooterElements';
+import { SubTitle } from '../../globalStyles'
+import { FooterContainer } from '../Footer/styles'
 
-function AboutUs() {
+function AboutUs () {
   return (
     <FooterContainer>
-      <SubTitle className="secondary">Quienes Somos</SubTitle>
-      <p className="text-center">
+      <SubTitle className='secondary'>Quienes Somos</SubTitle>
+      <p className='text-center'>
         Minim nostrud quis amet deserunt ea fugiat cillum dolor officia. Amet
         elit esse non id cillum magna incididunt dolore mollit ullamco sint.
         Culpa amet minim sit velit eiusmod veniam excepteur aliquip sit
@@ -16,7 +15,7 @@ function AboutUs() {
         pariatur sit.
       </p>
     </FooterContainer>
-  );
+  )
 }
 
-export default AboutUs;
+export default AboutUs

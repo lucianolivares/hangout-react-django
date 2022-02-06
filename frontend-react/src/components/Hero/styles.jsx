@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import background from '../../images/background.jpg';
+import styled from 'styled-components'
+import background from '../../images/background.jpg'
 
 export const HeroContent = styled.div`
   height: 25rem;
@@ -11,7 +11,7 @@ export const HeroContent = styled.div`
 
   @media screen and (max-width: 758px) {
   }
-`;
+`
 
 export const Container = styled.div`
   display: flex;
@@ -24,13 +24,13 @@ export const Container = styled.div`
     rgba(2, 0, 36, 0.75) 50%,
     rgba(0, 0, 0, 0) 100%
   );
-`;
+`
 
 export const Body = styled.p`
   font-size: clamp(1rem, 1.5vw + 0.5rem, 1.8rem);
   text-align: center;
   font-family: 'Poppins', sans-serif;
-`;
+`
 
 export const Button = styled.button`
   background: white;
@@ -44,4 +44,4 @@ export const Button = styled.button`
   :hover {
     background: ${({ theme }) => theme.colors.secondary};
   }
-`;
+`

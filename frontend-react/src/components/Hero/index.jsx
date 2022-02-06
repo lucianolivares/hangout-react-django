@@ -1,9 +1,8 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Title } from '../../globalStyles';
-import { Body, Button, Container, HeroContent } from './HeroElements';
+import { Link } from 'react-router-dom'
+import { Title } from '../../globalStyles'
+import { Body, Button, Container, HeroContent } from './styles'
 
-function Hero() {
+function Hero () {
   return (
     <HeroContent>
       <Container>
@@ -11,12 +10,12 @@ function Hero() {
         <Body>
           Los mejores restaurantes de tu ciudad esperan a que los visites
         </Body>
-        <Link to="/sign-up">
+        <Link to='/sign-up'>
           <Button>Registrarte Ahora</Button>
         </Link>
       </Container>
     </HeroContent>
-  );
+  )
 }
 
-export default Hero;
+export default Hero
