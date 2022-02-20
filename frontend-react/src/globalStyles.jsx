@@ -23,6 +23,7 @@ export const GlobalStyle = createGlobalStyle`
 
 export const PageContainer = styled.div`
   display: grid;
+  min-height: 100vh;
   background-color: ${({ theme }) => theme.colors.bg_color};
   margin-top: 4.5rem;
 
