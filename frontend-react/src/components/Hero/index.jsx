@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { Link } from 'wouter'
 import { Title } from '../../globalStyles'
 import { Body, Button, Container, HeroContent } from './styles'
 

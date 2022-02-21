@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link } from 'wouter'
 import { Card, GridContainer, Title } from '../../globalStyles'
 import data from './Data'
 
@@ -18,7 +18,7 @@ function Restaurants () {
             <img src={props.image} alt={props.name} />
             <p>{props.name}</p>
             <span>{props.address}</span>
-            <Link to={`/restaurant-view/${props.name}`}>
+            <Link to={`/restaurant-view/${props.id}`}>
               <button>Ver local</button>
             </Link>
           </Card>

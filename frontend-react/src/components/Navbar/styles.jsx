@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { NavLink as Link } from 'react-router-dom'
+import { Link } from 'wouter'
 
 export const NavbarContainer = styled.nav`
   position: fixed;

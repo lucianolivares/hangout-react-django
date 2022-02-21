@@ -1,5 +1,5 @@
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import { ThemeProvider } from 'styled-components'
+import { Route } from 'wouter'
 import { GlobalStyle } from './globalStyles'
 import Home from './pages/Home'
 import RestaurantsPage from './pages/RestaurantsPage'
@@ -27,23 +27,19 @@ const theme = {
 function App () {
   return (
     <ThemeProvider theme={theme}>
-      <Router>
-        <GlobalStyle />
-        {/* <ScrollToTop /> */}
+      <GlobalStyle />
+      {/* <ScrollToTop /> */}
 
-        <Navbar />
+      <Navbar />
 
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='restaurants' element={<RestaurantsPage />} />
-          <Route path='categories' element={<CategoriesPage />} />
-          <Route path='restaurant-view/:id' element={<Menu />} />
-          <Route path='sign-up' element={<SignUp />} />
-          <Route path='about-us' element={<AboutUs />} />
-        </Routes>
+      <Route path='/' component={Home} />
+      <Route path='/restaurants' component={RestaurantsPage} />
+      <Route path='/categories' component={CategoriesPage} />
+      <Route path='/restaurant-view/:id' component={Menu} />
+      <Route path='/sign-up' component={SignUp} />
+      <Route path='/about-us' component={AboutUs} />
 
-        <Footer />
-      </Router>
+      <Footer />
     </ThemeProvider>
   )
 }

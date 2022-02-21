@@ -1,12 +1,18 @@
-import React from 'react'
-import { useParams } from 'react-router-dom'
+import React, { useEffect, useState } from 'react'
 import { PageContainer, Title } from '../../globalStyles'
+import data from '../../components/Restaurants/Data'
 
-function Menu () {
-  const { id } = useParams()
+function Menu (props) {
+  const { id } = props.params
+  const [restorant, setRestorant] = useState({})
+
+  useEffect(() => {
+    const singleData = data.find(obj => obj.id === parseInt(id))
+    setRestorant(singleData)
+  })
   return (
     <PageContainer>
-      <Title>{id}</Title>
+      <Title>{restorant.name}</Title>
     </PageContainer>
   )
 }
