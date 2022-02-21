@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-=======
 import React, { Suspense, lazy } from 'react'
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
->>>>>>> eb5db2cfa4f8d7d76926217ffc67c7f788199561
 import { ThemeProvider } from 'styled-components'
 import { Route } from 'wouter'
 import { GlobalStyle } from './globalStyles'
@@ -33,42 +29,18 @@ const theme = {
 function App () {
   return (
     <ThemeProvider theme={theme}>
-<<<<<<< HEAD
       <GlobalStyle />
       {/* <ScrollToTop /> */}
-=======
-      <Router>
-
-        <GlobalStyle />
-        {/* <ScrollToTop /> */}
->>>>>>> eb5db2cfa4f8d7d76926217ffc67c7f788199561
-
       <Navbar />
-
-<<<<<<< HEAD
-      <Route path='/' component={Home} />
-      <Route path='/restaurants' component={RestaurantsPage} />
-      <Route path='/categories' component={CategoriesPage} />
-      <Route path='/restaurant-view/:id' component={Menu} />
-      <Route path='/sign-up' component={SignUp} />
-      <Route path='/about-us' component={AboutUs} />
-
+      <Suspense fallback={<div>Loading...</div>}>
+        <Route path='/' component={Home} />
+        <Route path='/restaurants' component={RestaurantsPage} />
+        <Route path='/categories' component={CategoriesPage} />
+        <Route path='/restaurant-view/:id' component={Menu} />
+        <Route path='/sign-up' component={SignUp} />
+        <Route path='/about-us' component={AboutUs} />
+      </Suspense>
       <Footer />
-=======
-        <Suspense fallback={<div>Loading...</div>}>
-          <Routes>
-            <Route path='/' element={<Home />} />
-            <Route path='restaurants' element={<RestaurantsPage />} />
-            <Route path='categories' element={<CategoriesPage />} />
-            <Route path='restaurant-view/:id' element={<Menu />} />
-            <Route path='sign-up' element={<SignUp />} />
-            <Route path='about-us' element={<AboutUs />} />
-          </Routes>
-
-        </Suspense>
-        <Footer />
-      </Router>
->>>>>>> eb5db2cfa4f8d7d76926217ffc67c7f788199561
     </ThemeProvider>
   )
 }
